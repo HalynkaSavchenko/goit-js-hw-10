@@ -9,7 +9,7 @@ const form = document.querySelector(".form");
 form.addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const delay = document.querySelector("[name=delay]").value;
+  const delay = Number(document.querySelector("[name=delay]").value);
   const state = document.querySelector("[name=state]:checked").value;
 
   const notificationPromise = new Promise((resolve, reject) => {
